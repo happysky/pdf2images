@@ -1,0 +1,10 @@
+FROM python:3.8
+ADD . /app
+WORKDIR /app
+#RUN pip install -r requirements.txt
+#RUN pip install --trusted-host -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+RUN pip install --trusted-host pypi.tuna.tsinghua.edu.cn -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+RUN apt-get update && apt-get install -y
+RUN apt-get install poppler-utils -y
+EXPOSE 5000
+CMD ["python", "app.py"]

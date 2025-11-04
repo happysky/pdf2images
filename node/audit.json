@@ -1,0 +1,61 @@
+{
+    "keepSettings": {
+        "type": 2,
+        "amount": 10
+    },
+    "auditFilename": "audit.json",
+    "hashType": "md5",
+    "extension": "",
+    "files": [
+        {
+            "date": 1721095621328,
+            "name": "/usr/app/.log/access-20240716.log",
+            "hash": "be6c7c1fe0b0f4287720ad2470417962"
+        },
+        {
+            "date": 1721095621332,
+            "name": "/usr/app/.log/error-20240716.log",
+            "hash": "c441bd06a7a61b5c94b5ea9107d59c75"
+        },
+        {
+            "date": 1721218587284,
+            "name": "/usr/app/.log/access-20240717.log",
+            "hash": "1117ce72e3e4e77f8bd2af8bbc547896"
+        },
+        {
+            "date": 1721218587286,
+            "name": "/usr/app/.log/error-20240717.log",
+            "hash": "37b9a7a8f4d72c897df3585b448aecca"
+        },
+        {
+            "date": 1721266678822,
+            "name": "/usr/app/.log/access-20240718.log",
+            "hash": "3f769b4777cf11042b04e139b95fe1e2"
+        },
+        {
+            "date": 1721266851583,
+            "name": "/usr/app/.log/error-20240718.log",
+            "hash": "d9cc63a5a6cb1515e5329c492cb1e3ab"
+        },
+        {
+            "date": 1721887705706,
+            "name": "/usr/app/.log/access-20240725.log",
+            "hash": "6e65ad603b82a91a634375341b78859f"
+        },
+        {
+            "date": 1729159087454,
+            "name": "/usr/app/.log/access-20241017.log",
+            "hash": "bbf33902467afaebd2f661ac46849dde"
+        },
+        {
+            "date": 1762223268970,
+            "name": "/usr/app/.log/access-20251104.log",
+            "hash": "65875b5f105f59eb41f61d99dc37b0eb"
+        },
+        {
+            "date": 1762223269012,
+            "name": "/usr/app/.log/error-20251104.log",
+            "hash": "fc08497336230855b1f0113ae68ab029"
+        }
+    ]
+}

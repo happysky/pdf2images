@@ -1,0 +1,9 @@
+#日志
+nginx_logs/
+logs/
+.log/
+
+# 生成的图片
+pdfs/
+
+node_modules

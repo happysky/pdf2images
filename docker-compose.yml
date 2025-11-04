@@ -1,0 +1,39 @@
+version: '3.2'
+services:
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+      - 5001:80
+    volumes:
+      - ./logrotate_config/nginx:/etc/logrotate.d/nginx
+      - ./logrotate_config/crontab:/etc/cron.d/logrotate-cron
+      - ./logrotate_config/crontab.sh:/usr/script/crontab.sh
+      - ./logrotate_config/cron.log:/var/log/cron.log
+      #- ./logrotate_config/logrotate.conf:/etc/logrotate.conf
+      - ./nginx_config/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_config/conf.d/:/etc/nginx/conf.d/
+      - ./nginx_logs/:/var/log/nginx/
+      - ./dist/:/usr/app/
+  pymupdf:
+    build:
+      context: ./
+      dockerfile: Dockerfile.pymupdf
+    volumes:
+      - ./:/app/
+  node:
+    build: 
+      context: ./node/
+    ports:
+      - 3001:3000
+    volumes:
+      - ./node/:/usr/app/
+      - ./node/node_modules:/usr/app/node_modules
+  mupdfjs:
+    build: 
+      context: ./mupdfjs/
+    ports:
+      - 3002:3000
+    volumes:
+      - ./mupdfjs/:/usr/app/
+      - ./mupdfjs/node_modules:/usr/app/node_modules

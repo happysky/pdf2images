@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/js/jquery-3.7.1.min.js"></script>
+  <script src="/js/index.js?t={{current_time}}"></script>
+  <style>
+    #container{
+      display: flex;
+      max-width: 2048px;
+      margin: 20px auto 0;
+    }
+    #container>div{
+      flex: 1;
+    }
+    #container div:nth-of-type(1){
+      border-right: #9a9a9a solid 1px;
+    }
+    #container img{
+      width: 100%;
+    }
+    .loading{
+      margin: 100px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input type="file" name="file"/>
+    <input type="input" name="page_number" placeholder="可指定转换的页数" />
+    <input type="submit" />
+  </form>
+  <div id="container">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
