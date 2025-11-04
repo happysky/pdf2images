@@ -2,6 +2,7 @@
 nginx_logs/
 logs/
 .log/
+*.log
 
 # 生成的图片
 pdfs/
