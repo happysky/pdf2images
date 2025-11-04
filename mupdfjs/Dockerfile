@@ -1,4 +1,4 @@
-FROM node:library/node
+FROM node
 
 
 COPY package.json .npmrc yarn.lock /usr/

@@ -1,12 +1,9 @@
-FROM library/nginx
+FROM nginx
 
 # Remove sym links from nginx image
 #RUN rm /var/log/nginx/access.log
 #RUN rm /var/log/nginx/error.log
 
-# 使用 archive 源
-RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list && \
-    sed -i 's|http://security.debian.org/debian-security|http://archive.debian.org/debian-security|g' /etc/apt/sources.list
 
 # Install logrotate
 RUN apt-get update -o Acquire::Check-Valid-Until=false && \
